@@ -1,3 +1,5 @@
+/**I have added comments for all special like properties so it'd be easy to browse thru the code*/
+
 * {
   /*Universal Selector */
   margin: 0;
@@ -46,11 +48,14 @@ body {
     -50%,
     -50%
   ); /*this is how we center with absolute positioning */
+  text-align: center;
 }
 
 .heading__primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden; /*when we rotate an item, back part won't be visible */
+  margin-bottom: 3.75rem;
 }
 
 .heading__primary__main {
@@ -58,11 +63,78 @@ body {
   font-size: 3.75rem;
   font-weight: 400;
   letter-spacing: 2.188rem;
+  animation: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; /*Animation will start slower and stop slower*/
 }
 
 .heading__primary__sub {
   display: block;
   font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 1.094rem;
+  letter-spacing: 1.1rem;
+  text-align: center;
+  animation: moveInRight 2s ease-in-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-6.25rem) rotate(0deg);
+  }
+
+  80% {
+    transform: translateX(0.625rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) ;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(6.25rem);
+  }
+
+  80% {
+    transform: translateX(-0.625rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ":link" and ":visited" is a pseudo class defines button state */
+.btn:link,
+.btn:visited { 
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.938rem 2.5rem;
+  display: inline-block; /* Otherwise this will be override on top of some other elements */
+  border-radius: 6.25rem;
+  transition: all 0.2s; /* Animations in a simple method */
+}
+
+.btn:focus {
+  border:4px dashed;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px); /*Active means on click state */
+  box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
 }
