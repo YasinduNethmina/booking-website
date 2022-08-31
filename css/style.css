@@ -1,4 +1,3 @@
-/**I added comments for all special like properties so it'd be easy to browse thru the code*/
 *,
 *::after,
 *::before {
@@ -13,61 +12,8 @@ html {
   /* Easy for calculations if we set root to 10px instead of 16px, normally 62.5% eqauals to 10px */ }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box;
   /* Borders and padding are not added default with this property */ }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  /*fit element into viewport*/
-  background-position: top;
-  /*cut image from bottom*/
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-  /* otherwise logo__box won't get positiond as needed */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem;
-    /* with auto assigns */ }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* this is how we center with absolute positioning */
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* when we rotate an item, back part won't be visible */
-  margin-bottom: 5rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    /* Animation will start slower and stop slower */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    text-align: center;
-    animation: moveInRight 2s ease-in-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -96,6 +42,36 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* when we rotate an item, back part won't be visible */
+  margin-bottom: 5rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    /* Animation will start slower and stop slower */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    text-align: center;
+    animation: moveInRight 2s ease-in-out; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -147,3 +123,28 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
   /* animation styles will apply before animations start */ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  /*fit element into viewport*/
+  background-position: top;
+  /*cut image from bottom*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  /* otherwise logo__box won't get positiond as needed */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* with auto assigns */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* this is how we center with absolute positioning */
+    text-align: center; }

@@ -1,0 +1,59 @@
+.btn {
+    &:link, /* ":link" and ":visited" is a pseudo class defines button state */
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block; /* Otherwise this will be override on top of some other elements */
+      border-radius: 10rem;
+      transition: all 0.2s; /* Animations in a simple method */
+      position: relative;
+      font-size: 1.6rem;
+    }
+  
+    &:focus {
+      border: 4px;
+    }
+  
+    &:hover {
+      transform: translateY(-f3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  
+    &:active {
+      transform: translateY(-1px); /* Active means on click state */
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+  
+    &--white {
+      background-color: $color-white;
+      color: $color-gray-dark;
+  
+      &::after {
+        background-color: white;
+      }
+    }
+  
+    &::after {
+      content: ""; /* Must add this, otherwise won't be visible */
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  
+    &--animated {
+      animation: moveInBottom 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards; /* animation styles will apply before animations start */
+    }
+  }

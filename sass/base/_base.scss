@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  /*Universal Selector */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* inherit from the body */
+}
+
+html {
+  font-size: 62.5%; /* Easy for calculations if we set root to 10px instead of 16px, normally 62.5% eqauals to 10px */
+}
+
+body {
+  box-sizing: border-box; /* Borders and padding are not added default with this property */
+}
