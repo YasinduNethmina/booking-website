@@ -1,43 +1,49 @@
-/**I have added comments for all special like properties so it'd be easy to browse thru the code*/
+/**I added comments for all special like properties so it'd be easy to browse thru the code*/
 
-* {
+*,
+*::after,
+*::before {
   /*Universal Selector */
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*Borders and padding are not added default with this property */
+  box-sizing: inherit; /* inherit from the body */
+}
+
+html {
+  font-size: 62.5%; /* Easy for calculations if we set root to 10px instead of 16px, normally 62.5% eqauals to 10px */
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
   line-height: 1.7;
   color: #777;
-  padding: 1.875rem;
+  padding: 3rem;
+  box-sizing: border-box; /* Borders and padding are not added default with this property */
 }
 
 .header {
   height: 95vh;
   background-image: linear-gradient(
       to right,
-      rgba(126, 245, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
+      rgba(126, 245, 111, .8),
+      rgba(40, 180, 133, .8)
     ),
     url(../img/hero.jpg);
   background-size: cover; /*fit element into viewport*/
-  background-position: top; /*cut from bottom*/
+  background-position: top; /*cut image from bottom*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; /* otherwise logo__box won't get positiond as needed */
 }
 
 .logo__box {
   position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 2.188rem; /*with auto assigns*/
+  height: 3.5rem; /* with auto assigns */
 }
 
 .text__box {
@@ -47,32 +53,32 @@ body {
   transform: translate(
     -50%,
     -50%
-  ); /*this is how we center with absolute positioning */
+  ); /* this is how we center with absolute positioning */
   text-align: center;
 }
 
 .heading__primary {
   color: #fff;
   text-transform: uppercase;
-  backface-visibility: hidden; /*when we rotate an item, back part won't be visible */
-  margin-bottom: 3.75rem;
+  backface-visibility: hidden; /* when we rotate an item, back part won't be visible */
+  margin-bottom: 5rem;
 }
 
 .heading__primary__main {
   display: block;
-  font-size: 3.75rem;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 2.188rem;
+  letter-spacing: 3.5rem;
   animation: moveInLeft;
   animation-duration: 2s;
-  animation-timing-function: ease-in-out; /*Animation will start slower and stop slower*/
+  animation-timing-function: ease-in-out; /* Animation will start slower and stop slower */
 }
 
 .heading__primary__sub {
   display: block;
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1.1rem;
+  letter-spacing: 1.75rem;
   text-align: center;
   animation: moveInRight 2s ease-in-out;
 }
@@ -80,11 +86,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-6.25rem) rotate(0deg);
+    transform: translateX(-10rem) rotate(0deg);
   }
 
   80% {
-    transform: translateX(0.625rem);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -96,11 +102,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(6.25rem);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-0.625rem);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -112,7 +118,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(1.875rem);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -126,11 +132,12 @@ body {
 .btn:visited { 
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.938rem 2.5rem;
+  padding: 1.5rem 4rem;
   display: inline-block; /* Otherwise this will be override on top of some other elements */
-  border-radius: 6.25rem;
+  border-radius: 10rem;
   transition: all 0.2s; /* Animations in a simple method */
   position: relative;
+  font-size:1.6rem;
 }
 
 .btn:focus {
@@ -139,12 +146,12 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px); /*Active means on click state */
-  box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px); /* Active means on click state */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -157,7 +164,7 @@ body {
   display:inline-block;
   height:100%;
   width:100%;
-  border-radius: 6.25rem;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -178,3 +185,5 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; /* animation styles will apply before animations start */
 }
+
+ 
