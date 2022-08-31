@@ -109,6 +109,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1.875rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ":link" and ":visited" is a pseudo class defines button state */
 .btn:link,
 .btn:visited { 
@@ -118,10 +130,11 @@ body {
   display: inline-block; /* Otherwise this will be override on top of some other elements */
   border-radius: 6.25rem;
   transition: all 0.2s; /* Animations in a simple method */
+  position: relative;
 }
 
 .btn:focus {
-  border:4px dashed;
+  border:4px;
 }
 
 .btn:hover {
@@ -137,4 +150,31 @@ body {
 .btn-white {
   background-color: white;
   color: #777;
+}
+
+.btn::after {
+  content:""; /* Must add this, otherwise won't be visible */
+  display:inline-block;
+  height:100%;
+  width:100%;
+  border-radius: 6.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity:0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; /* animation styles will apply before animations start */
 }
