@@ -9,6 +9,7 @@
     background-size: cover; /*fit element into viewport*/
     background-position: top; /*cut image from bottom*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative; /* otherwise logo__box won't get positiond as needed */
 
     &__logo-box {

@@ -38,6 +38,15 @@
         background-color: white;
       }
     }
+
+    &--green {
+      background-color: $color-primary;
+      color: $color-white;
+  
+      &::after {
+        background-color: white;
+      }
+    }
   
     &::after {
       content: ""; /* Must add this, otherwise won't be visible */
