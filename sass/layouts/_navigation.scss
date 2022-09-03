@@ -40,7 +40,7 @@
     z-index: 15;
     opacity: 0;
     width: 0; //otherwise links will click even though invisible
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
@@ -106,31 +106,30 @@
     &,
     &::before,
     &::after {
-      width: 3rem;
-      height: 2px;
-      background-color: $color-gray-dark-3;
-      display: inline-block;
+        width: 3rem;
+        height: 2px;
+        background-color: $color-gray-dark-3;
+        display: inline-block;
     }
 
     &::before,
     &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
     }
 
     &::before {
-      top: -0.8rem;
+        top:-.8rem;
     }
 
     &::after {
-      top: 0.8rem;
+        top:.8rem;
     }
   }
 
-  &__button:hover &__icon::before {
-    //button
+  &__button:hover &__icon::before { //button
     top: -1rem;
   }
 
@@ -138,19 +137,17 @@
     top: 1rem;
   }
 
-  &__checkbox:checked + &__button &__icon {
-    // hide the middle span on hover
-    background-color: transparent;
+  &__checkbox:checked + &__button &__icon { // hide the middle span on hover
+    background-color:transparent;
   }
 
-  &__checkbox:checked + &__button &__icon::before {
-    //Creates the cross on hover
+  &__checkbox:checked + &__button &__icon::before { //Creates the cross on hover
     transform: rotate(135deg);
-    top: 0;
+    top:0;
   }
 
-  &__checkbox:checked + &__button &__icon::after {
+  &__checkbox:checked + &__button &__icon::after { 
     transform: rotate(-135deg);
-    top: 0;
+    top:0;
   }
 }
