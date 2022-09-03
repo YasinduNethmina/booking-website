@@ -9,6 +9,22 @@
 
 html {
   font-size: 62.5%; /* Easy for calculations if we set root to 10px instead of 16px, normally 62.5% eqauals to 10px */
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1em = 12, 12/16 = 75%
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 em = 9px, 9/16 = 56.25% 
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1em = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    font-size: 30%;
+  }
 }
 
 body {
