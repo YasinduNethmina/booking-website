@@ -22,7 +22,7 @@ I wanted to challenge myself with advanced CSS concepts in this project 🔥 so 
 
 1. You can clone this repo easily and implement new features or make your own new version 😊 As I've been using SCSS-extended version of CSS on this project, first you need to install SCSS compiler into the project, anyway ``` npm install ``` will do everything you need! For more help if neeed, check this: https://sass-lang.com/install
 
-2. Once you install all required dependencies for the project, you can easily compile all the SCSS files with ``` npm run start ``` and it'll automatically start the website on a local-server.
+2. Once you install all required dependencies for the project, you can easily compile all the SCSS files with ``` npm run start ``` and it'll automatically start the website on a local-server. (If you want to build the project, use ```npm run build:css```)
 
 3. I've done the project on clean folder structure and added comments for all strange looking places in the code, so it'd be easy for you to understand!
 
