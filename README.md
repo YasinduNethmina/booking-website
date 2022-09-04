@@ -7,10 +7,15 @@ I wanted to challenge myself with advanced CSS concepts in this project 🔥 so 
 ### Things I've mastered with this project:
 
 -Advanced responsive design concepts (responsive images).
+
 -Writing globally used SCSS @mixins with $breakpoints for media queries.
+
 -Browser support concepts
+
 -SCSS syntax, variables with selectors, operators, calculations, pseudo elements, perspective, color-gradient properties, clip-path, skew, filters and etc!
+
 -CSS floats, grids, animations, transitions
+
 -packaging files with a optimial way using autoprefixer and postcss-cli
 
 # GUIDE TO USE THIS PROJECT FOR DEVELOPMENT:
