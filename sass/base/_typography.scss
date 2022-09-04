@@ -4,6 +4,10 @@ body {
   line-height: 1.7;
   color: $color-gray-dark;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 .heading-primary {
@@ -11,6 +15,11 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden; /* when we rotate an item, back part won't be visible */
   margin-bottom: 5rem;
+
+  @include respond(phone) {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
 
   &--main {
     display: block;
@@ -29,6 +38,10 @@ body {
     letter-spacing: 1.75rem;
     text-align: center;
     animation: moveInRight 2s ease-in-out;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -46,6 +59,14 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s ease-out;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 
 .u-center-text-heading:hover {
