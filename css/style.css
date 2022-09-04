@@ -708,8 +708,11 @@ body {
       position: relative; } }
   .header__logo-box {
     position: absolute;
-    top: 8rem;
+    top: 4rem;
     left: 4rem; }
+    @media (max-width: 56.25em) {
+      .header__logo-box {
+        top: 7.5rem; } }
   .header__logo {
     height: 3.5rem;
     /* with auto assigns */ }
