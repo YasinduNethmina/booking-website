@@ -712,7 +712,7 @@ body {
     left: 4rem; }
     @media (max-width: 56.25em) {
       .header__logo-box {
-        top: 7.5rem; } }
+        top: 7rem; } }
   .header__logo {
     height: 3.5rem;
     /* with auto assigns */ }
