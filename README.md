@@ -4,7 +4,7 @@ Live Link: https://yasindunethmina.github.io/booking-website/ 😎
 
 I wanted to challenge myself with advanced CSS concepts in this project 🔥 so this is written in pure HTML and SCSS.
 
-Things I've mastered with this project:
+### Things I've mastered with this project:
 
 -Advanced responsive design concepts (responsive images).
 -Writing globally used SCSS @mixins with $breakpoints for media queries.
