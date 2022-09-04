@@ -665,7 +665,7 @@ body {
     display: table;
     overflow: hidden;
     opacity: 0;
-    transition: all .5s; }
+    transition: all 0.5s; }
   .popup__left {
     width: 33.3333%;
     display: table-cell;
@@ -710,6 +710,17 @@ body {
     line-height: 1; }
   .popup__close:hover {
     color: #55c57a; }
+  @media only screen and (max-width: 37.5em) {
+    .popup .popup__content {
+      display: inline-block; } }
+  @media only screen and (max-width: 37.5em) {
+    .popup .popup__left {
+      display: inline-flex;
+      position: relative;
+      right: 7.5rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      width: 25%; } }
 
 .header {
   height: 95vh;
@@ -805,7 +816,7 @@ body {
     margin-bottom: 8rem; }
     @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
-        margin-bottom: 4rem; } }
+        margin-bottom: 7rem; } }
   .footer__logo {
     width: 15rem; }
   .footer__navigation {
