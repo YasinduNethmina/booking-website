@@ -30,3 +30,9 @@ html {
 body {
   box-sizing: border-box; /* Borders and padding are not added default with this property */
 }
+
+//When use select some text with mouse, these applies
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

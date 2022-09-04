@@ -193,7 +193,8 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  // Backpart visibility on front applies for devices we cannot hover and for the small screens. ex-mobiles!
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
