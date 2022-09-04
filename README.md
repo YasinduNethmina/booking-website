@@ -20,7 +20,7 @@ I wanted to challenge myself with advanced CSS concepts in this project 🔥 so 
 
 ## GUIDE TO USE THIS PROJECT FOR DEVELOPMENT:
 
-1. You can clone this repo easily and implement new features or make your own new version 😊 As I've been using SCSS-extended version of CSS, on this project first you need to install SCSS compiler into the project, anyway ``` npm install ``` will do everything you need! For more help if neeed, check this: https://sass-lang.com/install
+1. You can clone this repo easily and implement new features or make your own new version 😊 As I've been using SCSS-extended version of CSS on this project, first you need to install SCSS compiler into the project, anyway ``` npm install ``` will do everything you need! For more help if neeed, check this: https://sass-lang.com/install
 
 2. Once you install all required dependancies, you can easily compile all the SCSS files with ``` npm  watch:sass ``` and it'll automatically start the website on a local-server.
 
