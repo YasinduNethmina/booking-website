@@ -18,7 +18,7 @@ I wanted to challenge myself with advanced CSS concepts in this project 🔥 so 
 
 -packaging files with a optimial way using autoprefixer and postcss-cli
 
-# GUIDE TO USE THIS PROJECT FOR DEVELOPMENT:
+## GUIDE TO USE THIS PROJECT FOR DEVELOPMENT:
 
 1. You can clone this repo easily and implement new features or make your own new version 😊 As I've been using SCSS-extended version of CSS, on this project first you need to install SCSS compiler into the project, anyway ``` npm install ``` will do everything you need! For more help if neeed, check this: https://sass-lang.com/install
 
