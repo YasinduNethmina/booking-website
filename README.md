@@ -1,6 +1,7 @@
 # Booking-Website
 
 Live Link: https://booking-website-24a49.web.app/
+
 Use this if 1st link is broken: https://yasindunethmina.github.io/booking-website/ 😎
 
 I wanted to challenge myself with advanced CSS concepts in this project 🔥 so this is written in pure HTML and SCSS.
