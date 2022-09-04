@@ -100,6 +100,7 @@ body {
       letter-spacing: 1rem;
       font-size: 5rem; } }
   .heading-primary--main {
+    margin-left: 1.5rem;
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -747,7 +748,7 @@ body {
     left: 4rem; }
     @media only screen and (max-width: 56.25em) {
       .header__logo-box {
-        top: 7rem; } }
+        top: 8.5rem; } }
   .header__logo {
     height: 3.5rem;
     /* with auto assigns */ }
