@@ -1,4 +1,5 @@
 body {
+  animation-fill-mode: forwards;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -12,6 +13,7 @@ body {
 }
 
 .heading-primary {
+  animation-fill-mode: forwards;
   text-align: center;
   color: $color-white;
   text-transform: uppercase;
@@ -25,7 +27,6 @@ body {
   }
 
   &--main {
-    margin-left:1.5rem;
     display: block;
     font-size: 6rem;
     font-weight: 400;
