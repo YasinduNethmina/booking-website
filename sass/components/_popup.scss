@@ -24,12 +24,24 @@
     overflow: hidden;
     opacity: 0;
     transition: all .5s;
+
+    @include respond(phone) {
+      display: inline-block;
+    }
   }
 
   &__left {
     width: 33.3333%;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(phone) {
+      display: inline-flex;
+      position: relative;
+      left:25%;
+      margin-top:3rem;
+      width: 25%;
+    }
   }
 
   &__right {
